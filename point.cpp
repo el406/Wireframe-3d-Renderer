@@ -4,6 +4,7 @@
 
 #include "point.h"
 
+//returns a vector without transformations
 sf::Vector2f point::returnVector() const {
     return {x,y};
 
@@ -15,6 +16,7 @@ void point::plotPoints(float cx, float cy, float cz) {
     z = cz;
 }
 
+//actual 3d equation stuff
 sf::Vector2f point::returnProjectedVector(Camera c) const {
      float dX,dY,dZ;
      float eX = 100;

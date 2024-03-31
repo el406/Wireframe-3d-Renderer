@@ -1,6 +1,5 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Keyboard.hpp>
-#include <iostream>
 #include <vector>
 #include "point.h"
 
