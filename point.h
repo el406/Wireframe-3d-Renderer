@@ -13,8 +13,17 @@ public:
     float tby = 0;
     float tbz = 0;
     float x = 100;
-    float y = 100;
-    float z = 0;
+    float y = 0;
+    float z = -100;
+    void reset()
+    {
+        tbx = 0;
+        tby = 0;
+        tbz = 0;
+        x = 100;
+        y = 0;
+        z = -100;
+    }
 
 };
 

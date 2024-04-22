@@ -20,8 +20,8 @@ void point::plotPoints(float cx, float cy, float cz) {
 sf::Vector2f point::returnProjectedVector(Camera c) const {
      float dX,dY,dZ;
      float eX = 100;
-     float eY =100 ;
-     float eZ= 10;
+     float eY =100;
+     float eZ= 300;
      //ac = actual coord - camera coord
      float acX = x - c.x;
      float acY = y - c.y;
