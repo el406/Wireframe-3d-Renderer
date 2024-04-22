@@ -4,6 +4,7 @@
 #include <iostream>
 #include "point.h"
 
+
 sf::VertexArray createLinkLine(point p1, point p2,Camera c)
 {
     sf::VertexArray fin(sf::LineStrip,2);

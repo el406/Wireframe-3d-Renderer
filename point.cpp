@@ -1,6 +1,3 @@
-//
-// Created by milky on 3/25/2024.
-//
 
 #include "point.h"
 
