@@ -3,7 +3,7 @@
 #include <cmath>
 struct Camera
 {
-    //fun note; tb stands for tait-bryan angles lol.
+    //fun note; tb stands for tait-bryan angles lol
 public:
     float tbx = 0;
     float tby = 0;
