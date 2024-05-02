@@ -3,11 +3,11 @@ project(Ballrenderproject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ballrenderproject main.cpp
-        main.cpp
-        point.cpp
-        point.h
-        point.cpp)
+add_executable(Ballrenderproject src/main.cpp
+        src/main.cpp
+        src/point.cpp
+        src/point.h
+        src/point.cpp)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR D:/C++ExternalLibs/SFML/lib/cmake/SFML)
