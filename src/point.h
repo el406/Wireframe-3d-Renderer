@@ -40,7 +40,6 @@ public:
     //ide like to make this better somehow.
     void translateToCartY()
     {
-
         tbx = -polarY;
         y=(250*sinf(polarY))+190;
         r = (250*cosf(polarY));
@@ -88,11 +87,12 @@ public:
 
     sf::VertexArray makeProjectedArray(Camera c)
     {
-        sf::VertexArray ret(sf::LineStrip,3);
+        sf::VertexArray ret(sf::LineStrip,4);
         for (auto i = 0; i < 3; ++i)
         {
             ret[i] = points[i].returnProjectedVector(c);
         }
+        ret[3] = points[0].returnProjectedVector(c);
         return ret;
     }
 

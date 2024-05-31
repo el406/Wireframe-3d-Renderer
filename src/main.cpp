@@ -5,13 +5,6 @@
 #include "point.h"
 
 
-sf::VertexArray createLinkLine(point p1, point p2,Camera c)
-{
-    sf::VertexArray fin(sf::LineStrip,2);
-    fin[0] = p1.returnProjectedVector(c);
-    fin[1] = p2.returnProjectedVector(c);
-    return fin;
-}
 
 
 
@@ -38,14 +31,18 @@ int main()
     Camera core;
     std::vector<triangle> triangles;
     triangles.emplace_back(p1,p2,p3);
-    triangles.emplace_back(p1,p4,p3);
-    triangles.emplace_back(p5,p6,p7);
-    triangles.emplace_back(p5,p8,p7);
-
-    //TODO: Fix the goofy linkline function that you use bc you are a lazy bum
-    //triangles.emplace_back(p1,p5,p6);
+    //triangles.emplace_back(p1,p4,p3);
+    //triangles.emplace_back(p4,p3,p7);
+    //triangles.emplace_back(p4,p8,p7);
+    //triangles.emplace_back(p6,p7,p8);
+    //triangles.emplace_back(p5,p6,p8);
     //triangles.emplace_back(p5,p6,p2);
-    //triangles.emplace_back(p3,p7,p8);
+    //triangles.emplace_back(p1,p2,p5);
+    //triangles.emplace_back(p5,p1,p4);
+    //triangles.emplace_back(p4,p8,p5);
+    //triangles.emplace_back(p7,p3,p2);
+    //triangles.emplace_back(p2,p6,p7);
+
 
 
 
@@ -84,10 +81,6 @@ int main()
 
 
         }
-        window.draw(createLinkLine(p1,p5,core));
-        window.draw(createLinkLine(p2,p6,core));
-        window.draw(createLinkLine(p3,p7,core));
-        window.draw(createLinkLine(p4,p8,core));
 
         //EXTRAS STUFF HERE
 
@@ -99,9 +92,21 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))core.z+=.5;
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) core.z+=-.5;*/
 
+        //window.draw(createLinkLine(p1,p5,core));
+        //window.draw(createLinkLine(p2,p6,core));
+        //window.draw(createLinkLine(p3,p7,core));
+        //window.draw(createLinkLine(p4,p8,core));
+
 
         //draws y axis for rotation ref
-        window.draw(createLinkLine(axis1,axis2,core));
+        //window.draw(createLinkLine(axis1,axis2,core));
+        /*sf::VertexArray createLinkLine(point p1, point p2,Camera c)
+        {
+        sf::VertexArray fin(sf::LineStrip,2);
+        fin[0] = p1.returnProjectedVector(c);
+        fin[1] = p2.returnProjectedVector(c);
+        return fin;
+         }*/
 
 
 
