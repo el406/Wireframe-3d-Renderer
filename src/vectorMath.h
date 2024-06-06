@@ -3,8 +3,6 @@
 #include <SFML/Graphics.hpp>
 #include "point.h"
 
-
-
 point crossProduct(point i, point j)
 {
     point ret{};

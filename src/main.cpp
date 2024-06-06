@@ -6,9 +6,6 @@
 #include "Triangle.h"
 
 
-
-
-
 sf::RenderWindow window(sf::VideoMode(300, 300), "3d render babyyyyy");
 
 

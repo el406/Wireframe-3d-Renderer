@@ -1,6 +1,5 @@
 #include "point.h"
 #include "vectorMath.h"
-
 #ifndef BALLRENDERPROJECT_TRIANGLE_H
 #define BALLRENDERPROJECT_TRIANGLE_H
 

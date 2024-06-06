@@ -1,7 +1,6 @@
 #ifndef BALLRENDERPROJECT_POINT_CPP
 #define BALLRENDERPROJECT_POINT_CPP
 #include "point.h"
-
 //returns a vector without transformations
 sf::Vector2f point::returnVector() const {
     return {x,y};

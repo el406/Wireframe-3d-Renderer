@@ -26,9 +26,6 @@ public:
         x = 120;
         y = 190;
         z = -100;
-
-
-
     }
     void translateToCartX()
     {
