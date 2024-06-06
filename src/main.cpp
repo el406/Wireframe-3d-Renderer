@@ -15,6 +15,8 @@ sf::VertexArray createLinkLine(point p1, point p2,Camera c)
 
 
 
+
+
 sf::RenderWindow window(sf::VideoMode(300, 300), "3d render babyyyyy");
 
 
