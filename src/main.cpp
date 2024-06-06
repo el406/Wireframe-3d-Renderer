@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "point.h"
+#include "Triangle.h"
 
 
 
@@ -31,17 +32,18 @@ int main()
     Camera core;
     std::vector<triangle> triangles;
     triangles.emplace_back(p1,p2,p3);
-    //triangles.emplace_back(p1,p4,p3);
-    //triangles.emplace_back(p4,p3,p7);
-    //triangles.emplace_back(p4,p8,p7);
-    //triangles.emplace_back(p6,p7,p8);
-    //triangles.emplace_back(p5,p6,p8);
-    //triangles.emplace_back(p5,p6,p2);
-    //triangles.emplace_back(p1,p2,p5);
-    //triangles.emplace_back(p5,p1,p4);
-    //triangles.emplace_back(p4,p8,p5);
-    //triangles.emplace_back(p7,p3,p2);
-    //triangles.emplace_back(p2,p6,p7);
+
+    triangles.emplace_back(p1,p3,p4);
+    triangles.emplace_back(p4,p3,p7);
+    triangles.emplace_back(p4,p7,p8);
+    triangles.emplace_back(p6,p8,p7);
+    triangles.emplace_back(p6,p5,p8);
+    triangles.emplace_back(p5,p6,p2);
+    triangles.emplace_back(p2,p1,p5);
+    triangles.emplace_back(p5,p1,p4);
+    triangles.emplace_back(p4,p8,p5);
+    triangles.emplace_back(p7,p3,p2);
+    triangles.emplace_back(p2,p6,p7);
 
 
 
@@ -77,9 +79,9 @@ int main()
         //rendering part
         for (auto&i : triangles)
         {
-            window.draw(i.makeProjectedArray(core));
-
-
+            if(i.testNormals(core)) {
+                window.draw(i.makeProjectedArray(core));
+            }
         }
 
         //EXTRAS STUFF HERE

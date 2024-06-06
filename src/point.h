@@ -1,6 +1,8 @@
-#pragma once
+#ifndef BALLRENDERPROJECT_POINT_H
+#define BALLRENDERPROJECT_POINT_H
 #include <SFML/Graphics.hpp>
 #include <cmath>
+
 struct Camera
 {
     //fun note; tb stands for tait-bryan angles lol
@@ -61,43 +63,16 @@ public:
     sf::Vector2f returnVector() const;
     sf::Vector2f returnProjectedVector(Camera c) const;
     void plotPoints(float cx, float cy, float cz);
+    bool oldTestProjectedVector(Camera c) const;
+    point rotationMatrix(Camera c) const;
+    static float dotProduct(point i, point j);
+
+
 };
 
 
-class triangle
-{
-public:
-    triangle(point p1,point p2, point p3)
-    {
-       points[0] = p1;
-       points[1] = p2;
-       points[2] = p3;
 
 
-    }
-    sf::VertexArray makeArray()
-    {
-        sf::VertexArray ret(sf::LineStrip,3);
-        for (auto i = 0; i < 3; ++i)
-        {
-         ret[i] = points[i].returnVector();
-        }
-        return ret;
-    }
-
-    sf::VertexArray makeProjectedArray(Camera c)
-    {
-        sf::VertexArray ret(sf::LineStrip,4);
-        for (auto i = 0; i < 3; ++i)
-        {
-            ret[i] = points[i].returnProjectedVector(c);
-        }
-        ret[3] = points[0].returnProjectedVector(c);
-        return ret;
-    }
-
-    point points[3];
-};
-
+#endif
 
 

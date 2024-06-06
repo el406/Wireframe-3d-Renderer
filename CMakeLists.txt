@@ -7,7 +7,9 @@ add_executable(Ballrenderproject src/main.cpp
         src/main.cpp
         src/point.cpp
         src/point.h
-        src/point.cpp)
+        src/point.cpp
+        src/vectorMath.h
+        src/Triangle.h)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR D:/C++ExternalLibs/SFML/lib/cmake/SFML)
