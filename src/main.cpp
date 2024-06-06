@@ -101,7 +101,7 @@ int main()
 
 
         //draws y axis for rotation ref
-        window.draw(createLinkLine(axis1,axis2,core));
+        //window.draw(createLinkLine(axis1,axis2,core));
 
 
 
