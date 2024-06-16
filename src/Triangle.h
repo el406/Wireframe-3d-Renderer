@@ -12,8 +12,6 @@ public:
         points[0] = p1;
         points[1] = p2;
         points[2] = p3;
-
-
     }
     sf::VertexArray makeArray()
     {
@@ -74,6 +72,26 @@ public:
         return subFinal.oldTestProjectedVector(c);
 
 
+    }
+
+    bool betterTestsNormals(Camera c)
+    {
+        point origin = points[1];
+        point ac = vectorAddition(origin, {-c.x,-c.y,-c.z});
+        origin.x = -origin.x;
+        origin.y = -origin.y;
+        origin.z = -origin.z;
+        point newPoints[3];
+        newPoints[0] = vectorAddition(points[0],origin);
+        newPoints[1].plotPoints(0,0,0);
+        newPoints[2] = vectorAddition(points[2],origin);
+        point normals{};
+        normals = crossProduct(newPoints[0], newPoints[2]);
+        if (getAngle(normals,ac) <= 90)
+        {
+            return true;
+        }
+        return false;
     }
 
 

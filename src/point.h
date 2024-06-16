@@ -62,7 +62,8 @@ public:
     void plotPoints(float cx, float cy, float cz);
     bool oldTestProjectedVector(Camera c) const;
     point rotationMatrix(Camera c) const;
-    static float dotProduct(point i, point j);
+    float magnitude() const
+    {return sqrtf((x*x)+(y*y)+(z*z));}
 
 
 };

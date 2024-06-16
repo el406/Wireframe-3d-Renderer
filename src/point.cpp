@@ -42,7 +42,7 @@ bool point::oldTestProjectedVector(Camera c) const {
 
 }
 
-float point::dotProduct(point i, point j) {return ((i.x*j.x)+(i.y*j.y)+(i.z*j.z));}
+
 
 point point::rotationMatrix(Camera c) const {
     float dX,dY,dZ;

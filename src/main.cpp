@@ -76,7 +76,7 @@ int main()
         //rendering part
         for (auto&i : triangles)
         {
-            if(i.testNormals(core)) {
+            if(i.betterTestsNormals(core)) {
                 window.draw(i.makeProjectedArray(core));
             }
         }
